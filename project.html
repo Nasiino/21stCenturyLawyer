@@ -1,0 +1,122 @@
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="apple-mobile-web-app-capable" content="no" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>Geo Finder</title>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108858221-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-108858221-1');
+	</script>
+	<meta property="og:image" content="images/icon_300.png"/>
+	<link rel="apple-touch-icon" href="images/icon_300.png"/>
+
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script>
+    	$(document).on("mobileinit", function () {
+        	$.mobile.hashListeningEnabled = false;
+        	$.mobile.pushStateEnabled = false;
+    	});
+	</script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<style>
+		.content {
+			text-align:left;
+			max-width:700px;
+			margin:0 auto 0 auto;
+			padding:0 15px 25px 15px
+		}
+	</style>
+</head>
+<body>
+
+<div data-role="page" id="filter">
+	<div data-role="header" data-position="fixed">
+		<h1>Program & Resource Finder</h1>
+		<a href="#about" class="ui-btn ui-icon-info ui-btn-icon-notext ui-corner-all ui-btn-right" data-transition="slide"></a>
+	</div>
+	<div data-role="content" class="content">
+		<div class="ui-field-contain">Use the following selections to find community based programs & services in Massachusetts.
+    		<select name="select-native-1" id="select-native-1" style="width:100%">
+        		<option value="0">Choose a Location</option>
+        		<option value="1">Barnstable County</option>
+        		<option value="2">Berkshire County</option>
+        		<option value="3">Bristol County</option>
+        		<option value="4">Dukes County</option>
+				<option value="5">Essex County</option>
+				<option value="6">Franklin County</option>
+				<option value="7">Hampden County</option>
+				<option value="8">Hampshire County</option>
+				<option value="9">Middlesex County</option>
+				<option value="10">Nantucket County</option>
+				<option value="11">Norfolk County</option>
+				<option value="12">Plymouth County</option>
+				<option value="13">Suffolk County</option>
+				<option value="14">Worcester County</option>
+    		</select>
+
+	<div ata-role="content" class="content">
+		<fieldset data-role="controlgroup">
+        	<h3 style="margin-top:0px;">Check All That Apply</h3>
+				<input type="checkbox" name="checkbox-v-2a" id="checkbox-v-2a">
+				<label for="checkbox-v-2a">Job Opportunties/Training</label>
+				<input type="checkbox" name="checkbox-v-2b" id="checkbox-v-2b">
+				<label for="checkbox-v-2b">Community Outreach</label>
+				<input type="checkbox" name="checkbox-v-2c" id="checkbox-v-2c">
+				<label for="checkbox-v-2c">Counseling</label>
+				<input type="checkbox" name="checkbox-v-2d" id="checkbox-v-2d">
+				<label for="checkbox-v-2d">Health Services</label>
+				<input type="checkbox" name="checkbox-v-2e" id="checkbox-v-2e">
+				<label for="checkbox-v-2e">High Risk</label>
+				<input type="checkbox" name="checkbox-v-2f" id="checkbox-v-2f">
+				<label for="checkbox-v-2f">Multi-Service</label>
+				<input type="checkbox" name="checkbox-v-2g" id="checkbox-v-2g">
+				<label for="checkbox-v-2g">Homeless Shelter</label>
+				<input type="checkbox" name="checkbox-v-2h" id="checkbox-v-2h">
+				<label for="checkbox-v-2h">Food Pantry</label>
+				<input type="checkbox" name="checkbox-v-2i" id="checkbox-v-2i">
+				<label for="checkbox-v-2i">Rehabilitation Center</label>
+				<input type="checkbox" name="checkbox-v-2j" id="checkbox-v-2j">
+				<label for="checkbox-v-2j">Legal Aid</label>
+    		</fieldset>
+	<div/>
+	<div>
+		<fieldset data-role="controlgroup" data-type="horizontal">
+    		<input type="radio" name="radio-choice-h-2" id="radio-choice-h-2a" value="list" checked="checked">
+    		<label for="radio-choice-h-2a">List View</label>
+    		<input type="radio" name="radio-choice-h-2" id="radio-choice-h-2b" value="map">
+    		<label for="radio-choice-h-2b">Map View</label>
+		</fieldset>
+
+		<a href="javascript:results_page();" data-role="button">Find Resources</a>
+
+	</div>
+</div>
+
+
+<div data-role="page" id="details">
+	<div data-role="header" data-position="fixed">
+		<h1>Details</h1>
+		<a href="#" data-rel="back" data-transition="slide" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-arrow-l ui-btn-icon-notext"></a>
+	</div>
+	<div data-role="content" class="content">
+		<div id="detail" v-for="" v-if="">
+		</div>
+	</div>
+</div>
+
+
+
+</script>
+
+
+</body>
+</html>
